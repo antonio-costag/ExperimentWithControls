@@ -29,5 +29,11 @@ namespace ExperimentWithControls
         {
             number.Text = numbeerTextBox.Text;
         }
+
+        private void numbeerTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !int.TryParse(e.Text, out int result);
+            //se o Hendled for true, ele impede o TextBox de ser atualizado
+        }
     }
 }
