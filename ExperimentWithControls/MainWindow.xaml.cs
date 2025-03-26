@@ -24,5 +24,10 @@ namespace ExperimentWithControls
         {
             InitializeComponent();
         }
+
+        private void numbeerTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            number.Text = numbeerTextBox.Text;
+        }
     }
 }
